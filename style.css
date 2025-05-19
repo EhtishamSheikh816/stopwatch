@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Roboto Mono", monospace;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #eee;
+}
+
+.container {
+  max-width: 900px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  text-shadow: 0 0 5px #3b82f6;
+}
+
+.stopwatch-card {
+  width: 100%;
+  background: linear-gradient(145deg, #e0f0ff, #c7ddff);
+  padding: 40px 30px;
+  border-radius: 16px;
+}
+
+.timer-display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 30px 40px;
+  background-color: #111;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  flex-wrap: wrap;
+}
+
+.time-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.time-section span {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #60a5fa;
+  min-width: 60px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.time-section label {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.separator {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.start-btn {
+  background: #111;
+  color: #60a5fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.start-btn:hover {
+  background: #222;
+}
+
+.pause-btn,
+.reset-btn {
+  background: #d6e4ff;
+  color: #3b53a7;
+  box-shadow: 0 4px 10px rgba(59, 82, 167, 0.3);
+}
+
+.pause-btn:hover,
+.reset-btn:hover {
+  background: #aac3ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .time-section span {
+    font-size: 2rem;
+    min-width: 45px;
+  }
+
+  .separator {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .button-group {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .stopwatch-card {
+    padding: 30px 20px;
+  }
+  #milli {
+    margin-right: 34px;
+  }
+}
